@@ -20,14 +20,17 @@ const renderErrorMessage = (name) => {
 const renderForm = () => {
     return (
         <div className="form" >
+            
             <form className='formWrapper'>
                 <div className="input-container">
                     <div className='wrapperLogin'>
+                        
                         <Box className='Login-inp'
 
-                        >
+                        >   <div style={{fontStyle:"font-family: 'Helvetica', 'Arial', sans-serif",textDecoration: "underline",
+                        textDecorationColor: "blue"}}><b>Login to your account</b></div>
                             <div className='inpar'><TextField fullWidth label="Mobile No. or Email" id="Mobile No. or Email" /></div>
-                            <div className='inpar'><TextField fullWidth label="Mobile No. or Email" id="Mobile No. or Email" /></div>
+                            <div className='inpar'><TextField fullWidth label="Password" id="Password" /></div>
 
                             <br></br>
 
@@ -126,13 +129,21 @@ export class Navbar extends Component {
                 </div>
                 <div className='bodyPage'>
 
-                    <div className='info-org'>
-                        <h6>SEARCH MY 
-                        <br></br>
-                        TENDER PLEASE</h6>
+                    <div className='org'>
+                       <div className='info-org-slogan'>
+                       SEARCH MY 
+                       <br></br>
+                       TENDER PLEASE
+                       </div>
+                       <br></br>
+                       <div className='info-org-desc'>
+                       Your one stop solution for a seamless,optimized
+                    <br></br>
+                    and automated tender searching experience
+                       </div>
 
                     </div>
-
+                    
                     <div className='card-con'>
                         {(logincardFlag) ? renderForm() : <div ></div>}
                     </div>
@@ -146,5 +157,7 @@ export class Navbar extends Component {
         )
     }
 }
+
+
 
 export default Navbar

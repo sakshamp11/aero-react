@@ -22,15 +22,24 @@
    padding: auto;
    margin-left: 5%;
 }
-.info-org{
+.info-org-slogan{
     font-family: 'Courier New', monospace;
-    margin-top: 2%;
-    margin-left: 15%;
-    font-size: 110px;
+    margin-top: 7%;
+    margin-left: 8%;
+    font-size: 100px;
 }
 /* .Login-btn{
    
 } */
+.info-org-desc{
+    margin-left: 9%;
+    font-family: 'Courier New', monospace;
+    font-size: 25px;
+}
+.bodyPage{
+    height: 100vh;
+    border: 1px black;
+}
 .form{
     position: absolute;
     border: 1px solid black;
@@ -39,7 +48,7 @@
     justify-content: center;
     width: 20%;
     height: 40vh;
-    margin-left: 28%;
+    margin-left: 26%;
     margin-top: 5%;
     
     
@@ -98,6 +107,6 @@
 
 .whole-wrapper{
     background-color: whitesmoke;
-    height: 100%;
+   
 
 }
