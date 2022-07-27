@@ -1,0 +1,14 @@
+.register-body{
+    background-color: #4682B4;
+    height: 100vh;
+}
+.reg-card{
+    height: 48vh;
+    width: 50vh;
+    background-color:white;
+    margin-top: 0.7vh;
+    margin-bottom: 2vh;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
