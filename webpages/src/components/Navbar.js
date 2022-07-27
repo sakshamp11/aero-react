@@ -49,7 +49,7 @@ const renderForm = () => {
                 </div>
                 <div className='creatacc'>
                    <div style={{marginLeft:"35%"}}>
-                   Create account 
+                   Create an  account 
                    </div>
                 </div>
 
