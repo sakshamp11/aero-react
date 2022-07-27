@@ -1,0 +1,103 @@
+
+
+/* 
+.whole-wrapper{
+    background-color: aqua;
+} */
+.header{
+   
+    height: 15vh;
+}
+.every{
+    background-color: whitesmoke;
+}
+.nav-list{
+    display: flex;
+
+    margin-left: 60%;
+    position: relative;
+}
+.nav-link{
+    margin: 8px;
+   padding: auto;
+   margin-left: 5%;
+}
+.info-org{
+    font-family: 'Courier New', monospace;
+    margin-top: 2%;
+    margin-left: 15%;
+    font-size: 110px;
+}
+/* .Login-btn{
+   
+} */
+.form{
+    position: absolute;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 40vh;
+    margin-left: 28%;
+    margin-top: 5%;
+    
+    
+}
+.LoginNav{
+    margin-left: 5%;
+}
+.bodyPage{
+    display: flex;
+    
+}
+.card-con{
+   margin-right: 4%;
+}
+.input-container{
+    display: flex;
+    align-items: center;
+    height: 17vh;
+    margin-bottom: 10%;
+    border: 1px solid black;
+
+    
+}
+.Login-inp{
+  
+   width: 120%;
+   border: 1px solid black;
+    
+    
+}
+.formWrapper{
+    width: 87%;
+   
+    align-items: center;
+    justify-content: center;
+    
+}
+.wrapperLogin{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   
+   
+
+
+}
+.inpar{
+    margin-top: 8%;
+}
+/* .middle{
+    display: flex;
+    align-items: center;
+} */
+
+.whole-wrapper{
+    background-color: whitesmoke;
+    height: 100%;
+
+}
