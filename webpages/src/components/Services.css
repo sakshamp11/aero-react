@@ -1,0 +1,26 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 12vw;
+    margin-top: 10vh;
+}
+
+p{
+    font-size: medium;
+}
+.mb-3{
+    width: 80vw;
+    height: 30vh;
+    /* border: 1px solid black; */
+}
+.section.pt-4{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

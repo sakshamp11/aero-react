@@ -1,0 +1,18 @@
+.register-body{
+    background-color: #4682B4;
+    height: 100vh;
+
+}
+.headerreg{
+    height: 2em;
+}
+.reg-card{
+    height: 60vh;
+    width: 70vh;
+    background-color:white;
+    margin-top: 5em;
+    margin-bottom: 1%;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
