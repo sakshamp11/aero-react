@@ -1,10 +1,12 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CloseButton from 'react-bootstrap/CloseButton';
 import axios from 'axios';
 import TextField from '@mui/material/TextField';
-import "./Navbar.css"
+// import ScrapedTendersdtlController from '../scrapedtendersdtlcontroller';
+// import UserController from '../usercontroller';
+import "./Login.css"
 
 let logincardFlag = true;
 // function logincard(props){
@@ -19,6 +21,11 @@ const renderErrorMessage = (name) => {
 }
 
 
+    // Changing the state after 2 sec
+    // from the time when the component
+    // is rendered
+    
+  
 const renderForm = () => {
     return (
         <div className="form" >
@@ -80,11 +87,38 @@ function Navbar() {
     //}
 
     const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [Email, setEmail] = useState("");
+    const [Password, setPassword] = useState("");
 
+   
+     async function f(){
+        
+        // setEmail("sps@gmail.com");
+        // setPassword("Suraj@1234");
+        console.log(Email,Password)
+        
+        let item={Email,Password}
+        console.log(item);
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({Email:{Email},Password:{Password}})
+        };
+        // let result=await  fetch('http://localhost:5000/api/login',{
+        //     method:'POST',
+        //     headers: {
+        //         'Accept': 'application/json'
+        //     },
+        //     mode:'cors',
+        //     body:JSON.stringify(item)
+            
+        // }
+        let result =await fetch('http://localhost:5000/api/login', requestOptions)
 
-
+        result=await result.json()
+        console.log(result)
+    }
+      
     return (
         <>
             <div className="whole-wrapper">
@@ -171,23 +205,20 @@ function Navbar() {
                                             textDecorationColor: "blue"
                                         }}><b>Login to your account</b></div>
                                             <div className='inpar'><TextField fullWidth label="Mobile No. or Email" id="Mobile No. or Email" onChange={(e) => setEmail(e.target.value)} /></div>
-                                            <div className='inpar'><TextField fullWidth label="Password" id="Password" onChange={(e) => setPassword(e.target.value)}/></div>
+                                            <div className='inpar'><TextField fullWidth label="Password" id="Password" onChange={(e) => setPassword(e.target.value)} /></div>
 
                                             <br></br>
 
                                         </Box>
                                         <br></br>
-                                        
 
-                                        
+
+
                                     </div>
                                 </div>
                                 <div>forgot password?</div>
                                 <div className='middle'>
-                                    <Button style={{ marginLeft: "35%", marginBottom: "3%", height: "100%" }} variant="contained" size="large" onClick={()=>{
-                                        console.log({email});
-                                        console.log({password});
-                                    }}>
+                                    <Button style={{ marginLeft: "35%", marginBottom: "3%", height: "100%" }} variant="contained" size="large" onClick={f}>
                                         Login
                                     </Button>
 
@@ -260,6 +291,7 @@ function Navbar() {
                     </div>
                 </div>
             </footer>
+            f()
         </>
     );
 }
