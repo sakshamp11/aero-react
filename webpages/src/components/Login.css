@@ -29,7 +29,7 @@
     font-family: 'Courier New', monospace;
     margin-top: 7%;
     margin-left: 8%;
-    font-size: 100px;
+    font-size: 90px;
 }
 /* .Login-btn{
    
@@ -49,9 +49,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    height: 50vh;
-    margin-left: 26%;
+    width: 25vw;
+    height: 80vh;
+    margin-left: 20%;
     margin-top: 5%;
     
     
@@ -71,14 +71,20 @@
     align-items: center;
     height: 17vh;
     margin-bottom: 10%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    flex-wrap: wrap;
 
     
 }
+/* .formWrapper{
+    
+} */
 .Login-inp{
   
    width: 120%;
-   border: 1px solid black;
+  /* // border: 1px solid black; */
+   flex-wrap: wrap;
+   
     
     
 }
@@ -87,6 +93,8 @@
    
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+
     
 }
 .wrapperLogin{
@@ -94,15 +102,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+
 
    
    
 
 
 }
-.inpar{
-    margin-top: 8%;
-}
+/* .inpar{
+    margin-top: ;
+} */
 /* .middle{
     display: flex;
     align-items: center;

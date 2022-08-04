@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "e37b4f26-6152-4d7a-a7f2-51cdb40a9c0e",
+		"name": "searchmytendercollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20831664"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Email\":\"suraj\",\r\n    \"Fname\":\"sp_1234\",\r\n    \"Lname\":\"singh\",\r\n    \"MobileNo\":\"8448245365\",\r\n    \"Password\":\"Suraj@1234\",\r\n    \"PasswordConf\":\"Suraj@1234\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "pricingTemplateId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Email\":\"sps@gmail.com\",\r\n\"Password\":\"Suraj@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/getscrapedtendersdtllist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/getscrapedtendersdtllist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getscrapedtendersdtllist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/getscrapedtendersdtllistbyid?scrapedId=62c432a2d97a6f49f79dd149",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/getscrapedtendersdtllistbyid?scrapedId=62c432a2d97a6f49f79dd149",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"getscrapedtendersdtllistbyid"
+					],
+					"query": [
+						{
+							"key": "scrapedId",
+							"value": "62c432a2d97a6f49f79dd149"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
