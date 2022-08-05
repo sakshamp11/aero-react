@@ -11,7 +11,15 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 import "./SearchList.css"
+
+
 export class SearchList extends Component {
+  async componentDidMount(){
+    let result =await fetch('http://localhost:5000/api/getscrapedtendersdtllist')
+
+    result=await result.json()
+    console.log(result)
+  }
   render() {
     return (
       <>

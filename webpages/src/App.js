@@ -8,10 +8,10 @@ import SearchList from './components/SearchList';
 function App() {
   return (
     // <div style={{backgroundColor:"whitesmoke",border:"1px solid black"}}>
-       <Login/>
+     // <Login/>
     // </div>
       //<Price/>
-      // <Register/>
+       <Register/>
       // <Services/>
     // <SearchList/>
      

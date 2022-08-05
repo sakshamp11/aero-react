@@ -29,12 +29,12 @@ function Register() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           
-        Email: {email},
-        Fname: {fname},
-        Lname: {lname},
-        MobileNo: {mb},
-        Password: {password},
-        PasswordConf: {password}
+        Email: email,
+        Fname: fname,
+        Lname: lname,
+        MobileNo: mb,
+        Password: password,
+        PasswordConf: password
         
         
         })
