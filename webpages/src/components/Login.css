@@ -1,4 +1,7 @@
+.input-container{
+    border: 1px solid blue;
 
+}
 
 /* 
 .whole-wrapper{
@@ -42,6 +45,7 @@
 .bodyPage{
     height: 100vh;
     border: 1px black;
+    width: 100vw;
 }
 .form{
     position: absolute;
@@ -66,19 +70,27 @@
 .card-con{
    margin-right: 4%;
 }
-.input-container{
+/* .input-container{
     display: flex;
     align-items: center;
     height: 17vh;
     margin-bottom: 10%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
     flex-wrap: wrap;
 
     
-}
-/* .formWrapper{
-    
 } */
+.formWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 17vh;
+    margin-bottom: 10%; */
+    height: 90%;
+    width: 90%;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
 .Login-inp{
   
    width: 120%;
@@ -88,21 +100,16 @@
     
     
 }
-.formWrapper{
-    width: 87%;
-   
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
 
-    
-}
 .wrapperLogin{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid red;
+
 
 
    
@@ -110,13 +117,7 @@
 
 
 }
-/* .inpar{
-    margin-top: ;
-} */
-/* .middle{
-    display: flex;
-    align-items: center;
-} */
+
 
 .whole-wrapper{
     background-color: whitesmoke;

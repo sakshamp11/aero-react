@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField';
 // import ScrapedTendersdtlController from '../scrapedtendersdtlcontroller';
 // import UserController from '../usercontroller';
 import "./Login.css"
+import {Link} from 'react-router-dom'
 
 let logincardFlag = true;
 // function logincard(props){
@@ -21,88 +22,76 @@ const renderErrorMessage = (name) => {
 }
 
 
-    // Changing the state after 2 sec
-    // from the time when the component
-    // is rendered
-    
-  
-const renderForm = () => {
-    return (
-        <div className="form" >
-            <CloseButton></CloseButton>
-            <form className='formWrapper'>
-                <div className="input-container">
-                    <div className='wrapperLogin'>
+// Changing the state after 2 sec
+// from the time when the component
+// is rendered
 
-                        <Box className='Login-inp'
 
-                        >   <div style={{
-                            fontStyle: "font-family: 'Helvetica', 'Arial', sans-serif", textDecoration: "underline",
-                            textDecorationColor: "blue"
-                        }}><b>Login to your account</b></div>
-                            <div className='inpar'><TextField fullWidth label="Mobile No. or Email" id="Mobile No. or Email" /></div>
-                            <div className='inpar'><TextField fullWidth label="Password" id="Password" /></div>
+// const renderForm = () => {
+//     return (
+//         <div className="form" >
+//             <CloseButton></CloseButton>
+//             <form className='formWrapper'>
+//                 <div className="input-container">
+//                     <div className='wrapperLogin'>
 
-                            <br></br>
+//                         <Box className='Login-inp'
 
-                        </Box>
-                        <br></br>
+//                         >   <div style={{
+//                             fontStyle: "font-family: 'Helvetica', 'Arial', sans-serif", textDecoration: "underline",
+//                             textDecorationColor: "blue"
+//                         }}><b>Login to your account</b></div>
+//                             <div className='inpar'><TextField fullWidth label="Mobile No. or Email" id="Mobile No. or Email" /></div>
+//                             <div className='inpar'><TextField fullWidth label="Password" id="Password" /></div>
 
-                    </div>
-                </div>
-                <div>forgot password?</div>
-                <div className='middle'>
-                    <Button style={{ marginLeft: "35%", marginBottom: "3%", height: "100%" }} variant="contained" size="large">
-                        Login
-                    </Button>
+//                             <br></br>
 
-                </div>
-                <div className='creatacc'>
-                    <div style={{ marginLeft: "35%" }}>
-                        Create an  account
-                        <Button variant="outlined" style={{ marginTop: "0.5vh", marginBottom: "0,5vh" }}>Register as Business</Button>
-                        <br></br>
-                        <Button variant="contained" style={{ marginTop: "0.5vh", marginBottom: "0,5vh" }}>Register as User</Button>
-                    </div>
-                </div>
+//                         </Box>
+//                         <br></br>
 
-            </form>
-        </div>
-    )
-}
+//                     </div>
+//                 </div>
+//                 {/* <div>forgot password?</div>
+//                 <div className='middle'>
+//                     <Button style={{ marginLeft: "35%", marginBottom: "3%", height: "100%" }} variant="contained" size="large">
+//                         Login
+//                     </Button>
+
+//                 </div>
+//                 <div className='creatacc'>
+//                     <div style={{ marginLeft: "35%" }}>
+//                         Create an  account
+//                         <Button variant="outlined" style={{ marginTop: "0.5vh", marginBottom: "0,5vh" }}>Register as Business</Button>
+//                         <br></br>
+//                         <Button variant="contained" style={{ marginTop: "0.5vh", marginBottom: "0,5vh" }}>Register as User</Button>
+//                     </div>
+//                 </div> */}
+
+//             </form>
+//         </div>
+//     )
+// }
 function Navbar() {
 
-    // constructor() {
-    //     super();
-    //     this.state = {
-
-    //         errorMessages: [],
-    //         isSubmitted: false,
-
-    //         name:'',
-    //         email:'',
-    //         mobile:''
-
-    //     };
-    //}
+    
 
     const [name, setName] = useState("");
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
 
-   
-     async function f(){
-        
+
+    async function f() {
+
         // setEmail("sps@gmail.com");
         // setPassword("Suraj@1234");
-        console.log(Email,Password)
-        
-        let item={Email,Password}
+        console.log(Email, Password)
+
+        let item = { Email, Password }
         console.log(item);
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({Email:{Email},Password:{Password}})
+            body: JSON.stringify({ Email: Email, Password: Password })
         };
         // let result=await  fetch('http://localhost:5000/api/login',{
         //     method:'POST',
@@ -111,14 +100,14 @@ function Navbar() {
         //     },
         //     mode:'cors',
         //     body:JSON.stringify(item)
-            
-        // }
-        let result =await fetch('http://localhost:5000/api/login', requestOptions)
 
-        result=await result.json()
+        // }
+        let result = await fetch('http://localhost:5000/api/login', requestOptions)
+
+        result = await result.json()
         console.log(result)
     }
-      
+
     return (
         <>
             <div className="whole-wrapper">
@@ -161,11 +150,11 @@ function Navbar() {
                                     <h4 class="nav-link" href="#">Contact</h4>
 
 
-
+                                    <Link to='/login'>
                                     <Button variant="contained" size="small" style={{ marginTop: "1.2vh", height: "70%", marginRight: "0.7vw" }}>
                                         Login
                                     </Button>
-
+                                    </Link>
 
 
                                 </div>
@@ -193,44 +182,46 @@ function Navbar() {
 
                     <div className='card-con'>
                         {(logincardFlag) ? <div className="form" >
-                            <CloseButton></CloseButton>
+
                             <form className='formWrapper' >
-                                <div className="input-container">
-                                    <div className='wrapperLogin'>
+                                
 
-                                        <Box className='Login-inp'
-
-                                        >   <div style={{
+                                        <div style={{
                                             fontStyle: "font-family: 'Helvetica', 'Arial', sans-serif", textDecoration: "underline",
                                             textDecorationColor: "blue"
                                         }}><b>Login to your account</b></div>
-                                            <div className='inpar'><TextField fullWidth label="Mobile No. or Email" id="Mobile No. or Email" onChange={(e) => setEmail(e.target.value)} /></div>
-                                            <div className='inpar'><TextField fullWidth label="Password" id="Password" onChange={(e) => setPassword(e.target.value)} /></div>
+                                        <div className='inpar'><TextField fullWidth label="Mobile No. or Email" id="Mobile No. or Email" onChange={(e) => setEmail(e.target.value)} style={{ padding: "2.5%",paddingBottom:"0%" ,width:"100%"}} /></div>
+                                        <div className='inpar'><TextField fullWidth label="Password" id="Password" onChange={(e) => setPassword(e.target.value)} style={{ padding: "2.5%",width:"100%" }} /></div>
+                                        <div >forgot password?</div>
+                                        <br></br>
+                                        <Button variant="contained" style={{width:"70%"}} onClick={f}>
+                                            Login
+                                        </Button>
+                                        <Button variant="outlined" style={{width:"70%"}}>Register as Business</Button>
+                                        <br></br>
+                                        <Button variant="contained" style={{width:"70%"}}>Register as User</Button>
 
-                                            <br></br>
 
-                                        </Box>
                                         <br></br>
 
 
 
-                                    </div>
-                                </div>
-                                <div style={{height:"10%" ,marginTop:"1vh"}}>forgot password?</div>
-                                <div className='middle'>
+                                   
+                                {/* <div style={{ height: "10%", marginTop: "1vh" }}>forgot password?</div>
+                                {/* <div className='middle'>
                                     <Button style={{ marginLeft: "35%", marginBottom: "3%", height: "100%" }} variant="contained" size="large" onClick={f}>
                                         Login
                                     </Button>
 
-                                </div>
-                                <div className='creatacc'>
-                                    <div style={{ marginLeft: "35%" }}>
+                                </div> */}
+                                {/* <div className='creatacc'>
+                                    <div style={{ marginLeft: "35%", display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
                                         Create an  account
-                                        <Button variant="outlined" style={{ height:"10%", marginTop: "0.5vh", marginBottom: "0,5vh" }}>Register as Business</Button>
+                                        <Button variant="outlined" style={{ height: "10%", marginTop: "0.5vh", marginBottom: "0,5vh" }}>Register as Business</Button>
                                         <br></br>
                                         <Button variant="contained" style={{ marginTop: "0.5vh", marginBottom: "0,5vh" }}>Register as User</Button>
                                     </div>
-                                 </div>
+                                </div>  */}
 
                             </form>
                         </div> : <div ></div>}
@@ -291,7 +282,7 @@ function Navbar() {
                     </div>
                 </div>
             </footer>
-            f()
+
         </>
     );
 }
